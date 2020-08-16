@@ -29,6 +29,10 @@ public class ExtentReporterNG implements IReporter{
 			String outputDirectory) {
 		ExtentSparkReporter htmlReport= new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/ExtentReport.html");
 		extent = new ExtentReports();
+		extent.setSystemInfo("Host Name", "Richa Windows");
+		extent.setSystemInfo("Username", "Richa Rihan");
+		extent.setSystemInfo("Environment", "QA");
+		
 		
 		extent.attachReporter(htmlReport);
 
