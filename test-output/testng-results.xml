@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53942" started-at="2020-08-16T11:10:17Z" finished-at="2020-08-16T11:11:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="53942" started-at="2020-08-16T11:10:17Z" finished-at="2020-08-16T11:11:10Z">
+      <class name="com.mystore.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="setup" is-config="true" duration-ms="25058" started-at="2020-08-16T11:10:18Z" finished-at="2020-08-16T11:10:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:1, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="validateItemsCount" duration-ms="2966" started-at="2020-08-16T11:10:43Z" data-provider="getTestData" finished-at="2020-08-16T11:10:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dress]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateItemsCount -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="tearDown" is-config="true" duration-ms="908" started-at="2020-08-16T11:10:46Z" finished-at="2020-08-16T11:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="setup" is-config="true" duration-ms="19311" started-at="2020-08-16T11:10:47Z" finished-at="2020-08-16T11:11:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:1, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="validateItemsCount" duration-ms="3036" started-at="2020-08-16T11:11:06Z" data-provider="getTestData" finished-at="2020-08-16T11:11:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shirts]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateItemsCount -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="tearDown" is-config="true" duration-ms="946" started-at="2020-08-16T11:11:10Z" finished-at="2020-08-16T11:11:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mystore.qa.testcases.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
