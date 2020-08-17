@@ -17,6 +17,7 @@ public class HomePageTest extends BaseClass{
 	HomePage homePage;
 	LoginPage loginPage;
 	LandingPage landingPage;
+	int i=0;
 	
 	String sheetName="Search Items";
 	
@@ -32,18 +33,18 @@ public class HomePageTest extends BaseClass{
 		homePage=loginPage.login(prop.getProperty("u"
 				+ "sername"),prop.getProperty("password"));
 	}
-	
-	@Test(priority=1)
-	public void validateTitleTest() {
-	String pageTitle="My account - My Store";
-	String homePageTitle = homePage.verifyHomePageTitle();
-	Assert.assertEquals(homePageTitle, pageTitle, "Home Page title not matched");
-	}
-	
-	@Test(priority=2)
-	public void getEveningDressesTest() {
-		homePage.selectEveningDresses();
-	}
+//	
+//	@Test(priority=1)
+//	public void validateTitleTest() {
+//	String pageTitle="My account - My Store";
+//	String homePageTitle = homePage.verifyHomePageTitle();
+//	Assert.assertEquals(homePageTitle, pageTitle, "Home Page title not matched");
+//	}
+//	
+//	@Test(priority=2)
+//	public void getEveningDressesTest() {
+//		homePage.selectEveningDresses();
+//	}
 	
 	@DataProvider
 	public Object[][] getTestData() {
@@ -52,10 +53,13 @@ public class HomePageTest extends BaseClass{
 	}
 	
 	
-	@Test(priority=1, dataProvider="getTestData")
+	@Test(priority=3, dataProvider="getTestData")
 	public void validateItemsCount(String itemName, String itemTotal) {
 		String itemActualCount = homePage.searchItem(itemName);
 		Assert.assertEquals(itemActualCount, itemTotal);
+		TestUtil.writeData(sheetName, "PASSED", i+1, 2);
+		i++;
+		
 	}
 	
 	@AfterMethod

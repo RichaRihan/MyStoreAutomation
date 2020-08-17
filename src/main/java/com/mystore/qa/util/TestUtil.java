@@ -7,7 +7,9 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -27,7 +29,7 @@ public class TestUtil extends BaseClass{
 	static Workbook book;
 	static Sheet sheet;
 	
-	public static Object[][] getTestData(String sheetName) {
+	public static void loadExcel(){
 		FileInputStream file=null;
 		try {
 			file=new FileInputStream(TESTDATA_SHEET_PATH);
@@ -43,6 +45,10 @@ public class TestUtil extends BaseClass{
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public static Object[][] getTestData(String sheetName) {
+		loadExcel();
 		sheet= book.getSheet(sheetName);
 		Object[][] data= new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 		
@@ -61,6 +67,16 @@ public class TestUtil extends BaseClass{
 		
 		return data;
 		
+	}
+	
+	public static void writeData(String sheetName, String result, int rowNum , int colNum) {
+			loadExcel();
+			sheet= book.getSheet(sheetName);
+			Row row= sheet.getRow(rowNum);
+			Cell cell = row.createCell(colNum);
+			cell.setCellValue(result);
+		
+	
 	}
 	
 	public static void takeScreenshotAtEndOfTest() throws IOException{

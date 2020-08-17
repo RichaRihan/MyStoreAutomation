@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53942" started-at="2020-08-16T11:10:17Z" finished-at="2020-08-16T11:11:10Z">
+  <suite name="Default suite" duration-ms="233585" started-at="2020-08-17T20:44:47Z" finished-at="2020-08-17T20:48:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53942" started-at="2020-08-16T11:10:17Z" finished-at="2020-08-16T11:11:10Z">
+    <test name="Default test" duration-ms="233585" started-at="2020-08-17T20:44:47Z" finished-at="2020-08-17T20:48:40Z">
       <class name="com.mystore.qa.testcases.HomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="setup" is-config="true" duration-ms="25058" started-at="2020-08-16T11:10:18Z" finished-at="2020-08-16T11:10:43Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="setup" is-config="true" duration-ms="23307" started-at="2020-08-17T20:44:49Z" finished-at="2020-08-17T20:45:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:1, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="validateItemsCount" duration-ms="2966" started-at="2020-08-16T11:10:43Z" data-provider="getTestData" finished-at="2020-08-16T11:10:46Z">
+        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:3, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="validateItemsCount" duration-ms="127135" started-at="2020-08-17T20:45:12Z" data-provider="getTestData" finished-at="2020-08-17T20:47:19Z">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateItemsCount -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="tearDown" is-config="true" duration-ms="908" started-at="2020-08-16T11:10:46Z" finished-at="2020-08-16T11:10:47Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="tearDown" is-config="true" duration-ms="1170" started-at="2020-08-17T20:47:19Z" finished-at="2020-08-17T20:47:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="setup" is-config="true" duration-ms="19311" started-at="2020-08-16T11:10:47Z" finished-at="2020-08-16T11:11:06Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="setup" is-config="true" duration-ms="20248" started-at="2020-08-17T20:47:20Z" finished-at="2020-08-17T20:47:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:1, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="validateItemsCount" duration-ms="3036" started-at="2020-08-16T11:11:06Z" data-provider="getTestData" finished-at="2020-08-16T11:11:10Z">
+        <test-method status="PASS" signature="validateItemsCount(java.lang.String, java.lang.String)[pri:3, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="validateItemsCount" duration-ms="58361" started-at="2020-08-17T20:47:41Z" data-provider="getTestData" finished-at="2020-08-17T20:48:39Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateItemsCount -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@42e26948]" name="tearDown" is-config="true" duration-ms="946" started-at="2020-08-16T11:11:10Z" finished-at="2020-08-16T11:11:10Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.qa.testcases.HomePageTest@4ac3c60d]" name="tearDown" is-config="true" duration-ms="1565" started-at="2020-08-17T20:48:39Z" finished-at="2020-08-17T20:48:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
