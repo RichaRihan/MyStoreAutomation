@@ -1,5 +1,7 @@
 package com.mystore.qa.testcases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -33,18 +35,18 @@ public class HomePageTest extends BaseClass{
 		homePage=loginPage.login(prop.getProperty("u"
 				+ "sername"),prop.getProperty("password"));
 	}
-//	
-//	@Test(priority=1)
-//	public void validateTitleTest() {
-//	String pageTitle="My account - My Store";
-//	String homePageTitle = homePage.verifyHomePageTitle();
-//	Assert.assertEquals(homePageTitle, pageTitle, "Home Page title not matched");
-//	}
-//	
-//	@Test(priority=2)
-//	public void getEveningDressesTest() {
-//		homePage.selectEveningDresses();
-//	}
+	
+	@Test(priority=1)
+	public void validateTitleTest() {
+	String pageTitle="My account - My Store";
+	String homePageTitle = homePage.verifyHomePageTitle();
+	Assert.assertEquals(homePageTitle, pageTitle, "Home Page title not matched");
+	}
+	
+	@Test(priority=2)
+	public void getEveningDressesTest() {
+		homePage.selectEveningDresses();
+	}
 	
 	@DataProvider
 	public Object[][] getTestData() {
@@ -54,7 +56,7 @@ public class HomePageTest extends BaseClass{
 	
 	
 	@Test(priority=3, dataProvider="getTestData")
-	public void validateItemsCount(String itemName, String itemTotal) {
+	public void validateItemsCount(String itemName, String itemTotal, String status) throws IOException {
 		String itemActualCount = homePage.searchItem(itemName);
 		Assert.assertEquals(itemActualCount, itemTotal);
 		TestUtil.writeData(sheetName, "PASSED", i+1, 2);

@@ -3,6 +3,7 @@ package com.mystore.qa.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -69,13 +70,17 @@ public class TestUtil extends BaseClass{
 		
 	}
 	
-	public static void writeData(String sheetName, String result, int rowNum , int colNum) {
+	public static void writeData(String sheetName, String result, int rowNum , int colNum) throws IOException {
 			loadExcel();
 			sheet= book.getSheet(sheetName);
 			Row row= sheet.getRow(rowNum);
 			Cell cell = row.createCell(colNum);
+			cell.setCellValue("");
 			cell.setCellValue(result);
-		
+			FileOutputStream fos=new FileOutputStream(System.getProperty("user.dir")+"/src/main/java/com/mystore/qa/testdata/MyStoreData.xlsx");
+			book.write(fos);
+			fos.close();
+			System.out.println("End of writing data in excel");
 	
 	}
 	
